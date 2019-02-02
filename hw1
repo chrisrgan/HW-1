@@ -1,0 +1,209 @@
+import java.util.Scanner;
+import java.lang.Math;
+
+public class calculator2
+{
+	int x,y,choice,i;
+	float result,a;
+	int factorial;
+	double result2;
+	
+	
+	
+	public void add()
+	{
+		result = x + y;
+	}
+	
+	public void subtract()
+	{
+		result = x - y;
+	}
+	
+	public void multiply()
+	{
+		result = x*y;
+        
+    }
+    public void divide()
+    {
+        result = x/y;
+    }
+   public void sqrt()   
+   	{
+        result = (int)Math.sqrt(x);
+    }
+    public void factorialnum()
+    {
+    	factorial=1;
+    	
+    	for(i=1; i<=x; i++)
+    	{
+    		factorial*=i;
+    		result = factorial;
+    	}
+
+    }
+	public void power()   
+   	{
+        result2 = Math.pow(x,y);
+    }
+    public void abs()   
+   	{
+        result = Math.abs(a);
+    }
+    public void floor()   
+   	{
+    	System.out.println(Math.floor(a));
+    	//I originally did this >> result = Math.floor(a)
+    	//but I kept getting errors with the assignment of a, as a double or float.
+    	//I did the same thing with ceiling() as well.
+    
+    }
+    public void ceiling()   
+   	{
+		System.out.println(Math.ceil(a));
+    }
+
+	public static void main(String[] args)
+	{
+		System.out.println("What do you want to do?");
+		System.out.println("1. Add, 2.Subtract, 3.Multiply, 4.Divide, 5.Square Root, 6.Factorial, 7.Power, 8.ABS, 9.Ceiling, 10.Floor");
+		
+		Scanner scan = new Scanner(System.in);
+		int choice = scan.nextInt();
+		
+		
+		
+		if (choice ==1)
+		{
+			calculator2 number = new calculator2();
+			System.out.println("Enter first number");
+			Scanner scan1 = new Scanner(System.in);
+			number.x = scan1.nextInt();
+			
+			System.out.println("Enter second number");
+			Scanner scan2  = new Scanner(System.in);
+			number.y = scan2.nextInt();
+			
+			number.add();
+			System.out.println("The machine produced:" + number.result);
+		}
+		
+		else if (choice ==2)
+		{
+			calculator2 number = new calculator2();
+			System.out.println("Enter first number");
+			Scanner scan1 = new Scanner(System.in);
+			number.x = scan1.nextInt();
+			
+			System.out.println("Enter second number");
+			Scanner scan2  = new Scanner(System.in);
+			number.y = scan2.nextInt();
+			
+			number.subtract();
+			System.out.println("The machine produced:" + number.result);
+
+		}
+		else if (choice ==3)
+		{
+			calculator2 number = new calculator2();
+			System.out.println("Enter first number");
+			Scanner scan1 = new Scanner(System.in);
+			number.x = scan1.nextInt();
+			
+			System.out.println("Enter second number");
+			Scanner scan2  = new Scanner(System.in);
+			number.y = scan2.nextInt();
+			
+			number.multiply();
+			System.out.println("The machine produced:" + number.result);
+
+		}
+		else if (choice ==4)
+		{
+			calculator2 number = new calculator2();
+			System.out.println("Enter first number");
+			Scanner scan1 = new Scanner(System.in);
+			number.x = scan1.nextInt();
+			
+			System.out.println("Enter second number");
+			Scanner scan2  = new Scanner(System.in);
+			number.y = scan2.nextInt();
+			
+			number.divide();
+			System.out.println("The machine produced:" + number.result);
+
+		}
+		else if (choice ==5)
+		{
+			calculator2 number = new calculator2();
+			System.out.println("Enter first number");
+			Scanner scan1 = new Scanner(System.in);
+			number.x = scan1.nextInt();
+			
+			number.sqrt();
+			System.out.println("The machine produced:" + number.result);
+
+		}
+		else if (choice ==6)
+		{
+			calculator2 number = new calculator2();
+			System.out.println("Enter first number");
+			Scanner scan1 = new Scanner(System.in);
+			number.x = scan1.nextInt();
+			
+			number.factorialnum();
+			System.out.println("The machine produced:" + number.result);
+
+		}
+		else if (choice ==7)
+		{
+			calculator2 number = new calculator2();
+			System.out.println("Enter first number");
+			Scanner scan1 = new Scanner(System.in);
+			number.x = scan1.nextInt();
+			
+			System.out.println("Enter second number");
+			Scanner scan2  = new Scanner(System.in);
+			number.y = scan2.nextInt();
+
+			
+			number.power();
+			System.out.println("The machine produced:" + number.result2);
+
+		}
+		else if (choice ==8)
+		{
+			calculator2 number = new calculator2();
+			System.out.println("Enter first number");
+			Scanner scan1 = new Scanner(System.in);
+			number.a = scan1.nextInt();
+			
+			number.abs();
+			System.out.println("The machine produced:" + number.result);
+
+		}
+		
+		if (choice ==9)
+		{
+			calculator2 number2 = new calculator2();
+			System.out.println("Enter first number");
+			Scanner scan3 = new Scanner(System.in);
+			number2.a = scan3.nextFloat();
+			
+			number2.ceiling();
+
+		}
+		if (choice ==10)
+		{
+			calculator2 number2 = new calculator2();
+			System.out.println("Enter first number");
+			Scanner scan3 = new Scanner(System.in);
+			number2.a = scan3.nextFloat();
+			
+			number2.floor();
+
+		}
+	}
+}
